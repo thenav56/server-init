@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ys"
 
 plugins=(
-    git vi-mode docker docker-compose zsh_reload django tmux
+    git vi-mode docker docker-compose tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -29,4 +29,11 @@ export EDITOR=vim
 export VISUAL="vim"
 export TERM=xterm
 
-[ -f ~/.fzf.zsh  ] && source ~/.fzf.zsh
+alias nvim=vim
+
+# Returns whether the given command is executable or aliased.
+_has() {
+  return $( whence $1 >/dev/null )
+}
+
+_has fzf && source /usr/share/doc/fzf/examples/key-bindings.zsh
