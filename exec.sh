@@ -5,14 +5,7 @@ _has() {
 }
 
 install() {
-    if _has apt; then
-        sudo apt install $@
-    elif _has yum; then
-        sudo yum install $@
-    else
-        echo ERROR: could not find apt or yum
-        exit 1
-    fi
+    sudo apt install $@
 }
 
 
