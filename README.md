@@ -2,7 +2,9 @@
 
 ### Basic Installation
 
-via curl
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/thenav56/server-init/master/install.sh)"
+git clone https://github.com/thenav56/server-init ~/.dotfiles
+cd ~/.dotfiles
+./ubuntu-local-vm-package-install.sh
+./ubuntu-local-vm-config-install.sh
 ```

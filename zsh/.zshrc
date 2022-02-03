@@ -28,6 +28,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 export EDITOR=vim
 export VISUAL="vim"
 export TERM=xterm
+export PATH=${PATH}:${HOME}/.local/bin/
 
 alias nvim=vim
 
